@@ -11,7 +11,7 @@ Images are built via [Travis CI](https://travis-ci.org/t3ctechnologies/mongodb) 
 
 | mongodb version (Dockerfile) | Centos Linux version |
 | ---------------------------- | -------------------- |
-| [10.2.28](https://github.com/t3ctechnologies/mongodb/tree/master/3.2/Dockerfile) | Centos latest 7 |
+| [3.2](https://github.com/t3ctechnologies/mongodb/tree/master/3.2/Dockerfile) | Centos latest 7 |
 
 ## Environment Variables
 
