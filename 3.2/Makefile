@@ -5,7 +5,7 @@ VERSION ?= 3.2
 REPO = t3ctechnologies/mongodb
 NAME = mongodb-3.2
 
-.PHONY: build test push shell run start stop logs clean release
+.PHONEY: build test push shell run start stop logs clean release
 
 build:
 	docker build -t $(REPO):$(VERSION) ./
