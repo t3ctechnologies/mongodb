@@ -13,7 +13,7 @@ script:
 - make && make test
 after_success: |
   if [ "$TRAVIS_PULL_REQUEST" == "false" ] && ([ "$TRAVIS_BRANCH" == "master" ] || [ -n "$TRAVIS_TAG" ]); then
-    docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     make release
 
     if [ -n "$TRAVIS_TAG" ]; then
