@@ -3,7 +3,7 @@
 #
 
 # Pull base image
-FROM centos:centos7
+FROM t3ctechnologies/centos
 
 # Maintener
 MAINTAINER Gopal Kollengode <gopal.kollengode.t3c.io>
@@ -11,6 +11,7 @@ MAINTAINER Gopal Kollengode <gopal.kollengode.t3c.io>
 # Install MongoDB
 RUN echo -e "[mongodb]\nname=MongoDB Repository\nbaseurl=https://repo.mongodb.org/yum/redhat/7/mongodb-org/3.2/`uname -m`/\ngpgcheck=0\nenabled=1" > /etc/yum.repos.d/mongodb.repo && \
     yum install -y mongodb-org && \
+    yum update -y && \
     yum clean all && \
     chown -R mongod:mongod /var/lib/mongo
 
